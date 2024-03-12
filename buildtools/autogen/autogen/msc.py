@@ -333,7 +333,6 @@ def msc_dep(fd, tar, deplist, msc):
         x, de = split_filename(deplist[0])
         of = b + '.' + de
         fd.write('\t$(BISON) -o %s.tab.c --defines=%s.tmph.h $(YFLAGS) $(AM_YFLAGS) %s\n' % (b, b, of))
-        fd.write('\trm -f %s.tmph.h\n' % b)
     elif ext in ("obj", "tab.obj"):
         target, name = msc_find_target(tar, msc)
         if name[0] == '_':

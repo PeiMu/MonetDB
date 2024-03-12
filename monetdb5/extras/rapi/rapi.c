@@ -115,7 +115,7 @@ static char *RAPIinitialize(void) {
 		int stat = 0;
 
 		R_DefParams(Rp);
-		Rp->R_Slave = (Rboolean) TRUE;
+		Rp->R_NoEcho = (Rboolean) TRUE;
 		Rp->R_Quiet = (Rboolean) TRUE;
 		Rp->R_Interactive = (Rboolean) FALSE;
 		Rp->R_Verbose = (Rboolean) FALSE;

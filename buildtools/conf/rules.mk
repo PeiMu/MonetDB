@@ -11,7 +11,6 @@ MV=mv
 
 %.tab.c: %.y
 	$(BISON) -o $*.tab.c --defines=$*.tmph.h $(YFLAGS) $(AM_YFLAGS) $<
-	rm -f $*.tmph.h
 
 %.tab.h: %.y
 	$(BISON) -o $*.tmpc.c --defines=$*.tab.h $(YFLAGS) $(AM_YFLAGS) $<
